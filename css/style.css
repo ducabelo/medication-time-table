@@ -13,6 +13,7 @@ html {
 }
 
 body {
+  position: relative;
   color: var(--text-color);
   margin: 0;
   padding: 0;
@@ -265,6 +266,7 @@ label {
   top: 30px;
   padding: 30px 15px;
   margin: 0 auto;
+  margin-bottom: 2rem;
   background: #ddd;
   border-radius: 5px;
   box-shadow: 2px 2px 4px  #777;
@@ -355,14 +357,10 @@ label {
   box-shadow: 0 0 0 3px #ddd;
 }
 
-.mobile {
-  opacity: 0;
-  transition: .3s;
-}
-
 @media (max-width: 992px){
   .div-table {
     width: 80vw;
+    margin-bottom: 2rem;
   }
 
   #tabela {
@@ -488,3 +486,20 @@ label {
   color: red;
 }
 
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: -120px;
+  padding: 1rem auto;
+  width: 100%;
+  /* height: 3rem; */
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: .7;
+  border-top: rgba(0,0,0,0.3) 1px solid;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
