@@ -357,6 +357,23 @@ label {
   box-shadow: 0 0 0 3px #ddd;
 }
 
+/* Footer */
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  padding: .5rem 0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  opacity: .7;
+  border-top: rgba(0,0,0,0.3) 1px solid;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1.2rem;
+}
+
 @media (max-width: 992px){
   .div-table {
     width: 80vw;
@@ -434,6 +451,10 @@ label {
     background :#731f03;
     box-shadow: 0 0 0 3px #bbb;
   }
+
+  footer {
+    bottom: -150px;
+  }
  
 }
 
@@ -486,19 +507,4 @@ label {
   color: red;
 }
 
-/* Footer */
 
-footer {
-  position: absolute;
-  bottom: -120px;
-  padding: 1rem 0;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  opacity: .7;
-  border-top: rgba(0,0,0,0.3) 1px solid;
-  width: 100%;
-}
-
-footer p {
-  font-size: 1.2rem;
-}
