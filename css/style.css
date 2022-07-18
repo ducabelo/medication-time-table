@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --text-color: #001423;
+  --main-blue: #1468A5;
+  --hover-blue: #004374;
+  --middle-blue: #8CD3F1;
+  --light-blue: #D3EAF4;
+}
+
+body {
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  background: linear-gradient(rgba(37, 153, 202, 255),rgba(102, 184, 218, 255)10%,rgba(146, 204, 229,255),rgba(146, 204, 229,255), rgba(102, 184, 218, 255), rgba(37, 153, 202, 255) 90%);
+  min-height: 100vh;
+}
+
+.modal-container {
+  height: 100vh;
+  width: 100%;
+  background: rgba(239, 249, 254, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  overflow-y: scroll;
+}
+
+.modal-container.active {
+  display: flex;
+  align-items: center;
+}
+
+.modal-container::-webkit-scrollbar {
+  display: none;
+}
+
+.modal {
+  position: relative;
+  display: grid;
+  max-width: 34.125rem;
+  margin: 60px 15px;
+  padding: 10px 25px 30px 25px;
+  top: 30px;
+  border: var(--main-blue) 3px solid;
+  border-radius: 10px;
+  box-sizing: border-box;
+  box-shadow:  2px 4px 6px rgba(51, 51, 51, 0.4);
+  background: var(--light-blue);
+  font-size: 1.2rem;
+  animation: animaTop .3s forwards;
+ }
+
+  @keyframes animaTop {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+ }
+
+.closer {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  background: var(--main-blue);
+  border: var(--light-blue) 2px solid;
+  box-shadow: -3px 4px 4px 0 rgba(0,0,0,0.3),4px 5px 6px 0 rgba(0,0,0,0.3),
+  0 0 0 3px var(--main-blue);
+  font-size: 1.2rem;
+  color: var(--light-blue);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.closer:hover {
+  box-shadow: -2px 3px 3px 0 rgba(0,0,0,0.6),3px 4px 5px 0 rgba(0,0,0,0.6), 0 0 0 3px var(--main-blue);
+  background: var(--hover-blue);
+}
+
+input {
+  display: block;
+  border-radius: 5px;
+  border: 1px solid var(--main-blue);
+  height: 45px;
+  margin: 5px 0px 5px 0px;
+  padding-left: 10px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input:focus, #opcoes-medidas:focus, #opcoes-horas:focus, #horas:focus, #minutos:focus {
+  border: none;
+  outline: none;
+  box-shadow: 0px 0px 0px 2px var(--middle-blue), 0px 0px 0px 4px var(--main-blue);
+}
+
+label {
+  display: block;
+  white-space: normal;
+}
+
+.modal h1 {
+  color: var(--text-color);
+  font-size: 1.6rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #1468A5;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1.3rem;
+  letter-spacing: .1rem;
+  transition: .3s;
+}
+
+.btn:hover {
+  background: var(--hover-blue);
+  color: #eee;
+  box-shadow: 0 0 0 3px #bbb;
+}
+
+.fa-clock {
+  color: var(--main-blue);
+  position: absolute;
+  right: 30px;
+  top: 47%;
+  transition: .6s ease;
+}
+
+.nome-do-medicamento {
+  max-width: 546px;
+  display: grid;
+  margin-bottom: 30px;
+}
+#medicamento {
+  max-width: 98%;
+}
+
+.dosagem-indicacao {
+  grid-template-columns: 1fr 3fr;
+  display: grid; 
+  margin-bottom: 30px;
+  box-sizing: border-box;
+}
+
+#dosagem {
+  width: 45px;
+  margin-right: 5px;
+}
+
+#opcoes-medidas {
+  margin-top: 5px;
+  min-width: 157px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: var(--main-blue) 1px solid;
+}
+
+.div-indicacao {
+  display: grid;
+  justify-content: right;
+  padding-right: 15px;
+  margin-left: 20px;
+}
+#indicacao {
+  justify-self: right;
+}
+
+.hora-inicial {
+  display: flex;
+  flex-wrap: wrap;
+  width: 207px;
+  margin-bottom: 30px;
+}
+
+#horas {
+  margin-right: 15px;
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: var(--main-blue) 1px solid;
+  box-sizing: border-box;
+}
+
+#minutos {
+  width: 92px;
+  height: 45px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: var(--main-blue) 1px solid;
+  box-sizing: border-box;
+}
+
+#espaco-horas, #dias-medicamento {
+  width: 60px;
+  justify-self: start;
+}
+.campos-dosagem {
+  position: relative;
+  display: flex;
+}
+.campos-dosagem span {
+  position: absolute;
+  bottom: -15px;
+}
+.campos-dosagem span:last-child {
+  right: -40px;
+}
+
+.espaco-horas {
+  display: grid;
+  margin-bottom: 30px;
+}
+#opcoes-horas {
+  margin-top: 5px;
+  width: 110px;
+  height: 45px;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: var(--main-blue) 1px solid;
+}
+.qtde-dias {
+  margin-bottom: 30px;
+}
+
+
+
+/* Tabela */
+.div-table {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 95vw;
+  top: 30px;
+  padding: 30px 15px;
+  margin: 0 auto;
+  background: #ddd;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px  #777;
+}
+
+.cadastrar-medicamento {
+  margin-bottom: 20px;
+  width: 400px;
+  white-space: nowrap;
+  margin-left: auto;
+}
+
+#tabela {
+  width: 100%;
+  margin: 0 auto;
+  border: 2px solid #1468A5;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+
+
+#tabela th {
+  padding: 10px 5px;
+  background: #1468A5;
+  color: #fff;
+}
+#tabela td {
+  position: relative;
+  text-align: left;
+  display: table-cell;
+  padding: 15px 5px;
+}
+
+#tabela tr {
+  display: table-row;
+}
+
+#tabela tr:nth-child(odd){
+  background-color: #D3EAF4;
+}
+
+#tabela tr:nth-child(even){
+  background-color: #EFF9FE;
+}
+
+
+.edit-delete-button {
+  text-align: center;
+  width: 4.5rem;
+}
+
+.edit-button {
+  height: 1.6rem;
+  width: 1.6rem;
+  border: none;
+  cursor: pointer;
+  margin-right: .250rem;
+  font-size: 0;
+  background: url("../img/pen-to-square-solid.svg") white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 2px white;
+  margin-right: .5rem;
+  transition: .3s;
+}
+
+.delete-button {
+  height: 1.6rem;
+  width: 1.6rem;
+  font-size: 0;
+  color: var(--main-blue);
+  box-sizing: border-box;
+  box-shadow: 0 0 0 2px white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: url('../img/rectangle-xmark-solid.svg')white no-repeat;
+  background-size: 100%;
+  transition: .3s;
+}
+
+.delete-button:hover, .edit-button:hover {
+  background-color: #eee;
+  box-shadow: 0 0 0 3px #ddd;
+}
+
+.mobile {
+  opacity: 0;
+  transition: .3s;
+}
+
+@media (max-width: 992px){
+  .div-table {
+    width: 80vw;
+  }
+
+  #tabela {
+    border: none;
+  }
+
+  #tabela td {
+    display: block;
+    padding: 10px 15px;
+    text-align: right;
+  }
+
+  #tabela td:last-child {
+    border-radius: 5px;
+  }
+
+  #tabela td:nth-child(even) {
+    background: var(--light-blue);
+  }
+
+  #tabela td::before {
+    content: attr(data-title);
+    position: absolute;
+    left: 15px;
+    font-weight: 700;
+    display: block;
+    font-size: 1rem;
+  }
+
+  #tabela thead {
+    display: none;
+  }
+
+  #tabela tr {
+    border-radius: 5px;
+    display: block;
+    margin-bottom: 15px;
+    border: var(--main-blue) 1px solid;
+  }
+
+  #tabela tr:nth-child(odd){
+    background-color: #EFF9FE;
+  }
+
+  .edit-button, .delete-button {
+    font-size: 1.2rem;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    color: #fff;
+    background: url() var(--main-blue);
+  }
+
+  .delete-button {
+    font-size: 1.2rem;
+    width: auto;
+    height: auto;
+    padding: 10px 20px;
+    color: #fff;
+    background: url() #9c310e;
+  }
+
+  .edit-button:hover, .delete-button:hover {
+    color: #eee;
+    background: var(--hover-blue);
+    box-shadow: 0 0 0 3px #bbb;
+  }
+
+  .delete-button:hover {
+    color: #eee;
+    background :#731f03;
+    box-shadow: 0 0 0 3px #bbb;
+  }
+ 
+}
+
+@media (max-width: 576px) {
+
+  .modal {
+    width: 90%;
+    top: 100px;
+  }
+
+  .dosagem-indicacao {
+    display: block; 
+    margin-bottom: 20px;
+  }
+  .campos-dosagem {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+   .div-indicacao {
+    margin-left: 0px;
+    margin-bottom: 20px;
+    justify-content: left;
+  }
+  .fa-clock {
+    right: -20px;
+    transform: scale(0%);
+  }
+
+  .cadastrar-medicamento {
+    margin-bottom: 20px;
+    width: 100%;
+    white-space: nowrap;
+    font-size: 1rem;
+  }
+}
+
+/* Checar inputs */
+
+.vazio {
+  border: 2px solid red;
+  box-sizing: border-box;
+}
+
+.span-alert {
+  /* transform: translateX(-50px); */
+  opacity: 1;
+  font-size: 1rem;
+  /* animation: animaLeft .3s forwards; */
+  color: red;
+}
+

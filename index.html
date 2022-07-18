@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/e396d110a5.js" crossorigin="anonymous"></script>
+
+  <title>Medication</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+  <section class="modal-container">
+    <div class="modal">
+      <button class="closer">X</button>
+      <h1>Horários dos Medicamentos</h1>
+      <form id="formulario-medicamentos" name="formulario-medicamentos">
+        <div class="nome-do-medicamento">
+          <label for="medicamento">Medicamento *</label>
+          <input class="modal-input" type="text" name="medicamento" id="medicamento" data-index="new" required />
+          <span class="span-alert"></span>
+        </div>
+        <div class="dosagem-indicacao">
+          <div class="div-dosagem">
+            <label for="dosagem">Dosagem *</label>
+            <div class="campos-dosagem">
+              <input class="modal-input" type="text" name="dosagem" id="dosagem" required />
+              <span class="span-alert"></span>
+              <select class="modal-input" id="opcoes-medidas" name="opcoes-medidas" required>
+                <option value=""></option>
+                <option value="ml">ml</option>
+                <option value="gotas">gotas</option>
+                <option value="comprimidos">comprimidos</option>
+              </select>
+              <span class="span-alert"></span>
+            </div>
+          </div>
+
+          <div class="div-indicacao">
+            <label for="indicacao">Indicação *</label>
+            <input class="modal-input" type="text" name="indicacao" id="indicacao" required />
+            <span class="span-alert"></span>
+          </div>
+        </div>
+
+        <div class="espaco-horas">
+          <label for="opcoes-horas">De quantas em quantas horas? *</label>
+          <select class="modal-input" id="opcoes-horas" name="opcoes-horas" required>
+            <option value=""></option>
+            <option value="4">4h</option>
+            <option value="6">6h</option>
+            <option value="8">8h</option>
+            <option value="12">12h</option>
+            <option value="24">1 por dia</option>
+          </select>
+          <span class="span-alert"></span>
+        </div>
+
+        <div class="hora-inicial">
+          <div class="div-horas">
+            <label for="horas">Horas *</label>
+            <select class="modal-input" id="horas" name="horas" required>
+              <option value=""></option>
+              <option value="-1">Hora atual</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+            </select>
+          </div>
+
+          <div class="div-minutos">
+            <label for="minutos">Minutos *</label>
+            <select class="modal-input" id="minutos" name="minutos" disabled>
+              <option value=""></option>
+              <option value="00">00</option>
+              <option value="15">15</option>
+              <option value="30">30</option>
+              <option value="45">45</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="qtde-dias">
+          <label for="dias-medicamento">Quantidade de dias *</label>
+          <input class="modal-input" type="number" name="dias-medicamento" id="dias-medicamento" min="1" required />
+          <span class="span-alert"></span>
+        </div>
+
+        <button class="btn btn-modal-registrar-medicamento">Cadastrar</button>
+
+        <i class="fa fa-7x fa-solid fa-clock"></i>
+      </form>
+    </div>
+  </section>
+
+
+
+  <div class="div-table">
+    <button class="btn cadastrar-medicamento">Cadastrar Medicamento</button>
+    <table id="tabela">
+      <thead>
+        <tr>
+          <th>Medicamento</th>
+          <th>Dosagem</th>
+          <th>Indicação</th>
+          <th>Espaço</th>
+          <th>Início</th>
+          <th>Fim</th>
+          <th>Hora</th>
+          <th>Hora</th>
+          <th>Hora</th>
+          <th>Hora</th>
+          <th>Hora</th>
+          <th>Hora</th>
+          <th class="edit-delete-button">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td data-title="Medicamento">Amoxilina</td>
+          <td data-title="Dosagem">7ml</td>
+          <td data-title="Indicação">Dor de Garganta</td>
+          <td data-title="Espaço">8h/8h</td>
+          <td data-title="Início">03/07/2022</td>
+          <td data-title="Fim">13/03/2022</td>
+          <td data-title="Hora">6:00</td>
+          <td data-title="Hora">14:00</td>
+          <td data-title="Hora">22:00</td>
+          <td data-title="Hora">---</td>
+          <td data-title="Hora">---</td>
+          <td data-title="Hora">---</td>
+          <td><button class="edit-button"></button>
+            <button class="delete-button">X</button>
+          </td>
+        </tr>
+        <tr>
+          <td data-title="Medicamento">Amoxilina</td>
+          <td data-title="Dosagem">7ml</td>
+          <td data-title="Indicação">Dor de Garganta</td>
+          <td data-title="Espaço">8h/8h</td>
+          <td data-title="Início">03/07/2022</td>
+          <td data-title="Fim">13/03/2022</td>
+          <td data-title="Hora">6:00</td>
+          <td data-title="Hora">14:00</td>
+          <td data-title="Hora">22:00</td>
+          <td data-title="Hora">---</td>
+          <td data-title="Hora">---</td>
+          <td data-title="Hora">---</td>
+          <td><button class="edit-button"></button>
+            <button class="delete-button">X</button>
+          </td> 
+        </tr>-->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="./script/script.js"></script>
+</body>
+
+</html>

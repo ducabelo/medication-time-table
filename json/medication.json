@@ -1,0 +1,20 @@
+[
+  {
+    "medicamento": "Amoxilina",
+    "dosagem": "7ml",
+    "indicacao": "Dor de Garganta",
+    "espaco": "8h/8h",
+    "inicio": "07/07/2022",
+    "final": "07/17/2022",
+    "horarios": ["14h", "22h", "6h", "hora-4", "hora-5", "hora-6"]
+  },
+  {
+    "medicamento": "Dipirona",
+    "dosagem": "20gotas",
+    "indicacao": "Febre",
+    "espaco": "6h/6h",
+    "inicio": "07/07/2022",
+    "final": "07/17/2022",
+    "horarios": ["14h", "20h", "2h", "8h", "hora-5", "hora-6"]
+  }
+]
