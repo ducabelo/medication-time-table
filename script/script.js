@@ -1,13 +1,3 @@
-// const medicationList = {
-//   medicamento: 'Amoxilina Nervosa',
-//   dosagem: '7ml',
-//   indicacao: 'Dor de Garganta',
-//   espaco: '8h/8h',
-//   inicio: '07/07/2022',
-//   final: '07/17/2022',
-//   horarios: ['14h', '22h', '6h', 'hora-4', 'hora-5', 'hora-6'],
-// };
-
 function getLocalStorage() {
   return JSON.parse(localStorage.getItem('db_medication_list')) ?? [];
 }
@@ -124,6 +114,7 @@ function disableMinutesFromFormIfUserPicksTimeFromSystem() {
     minutesFromForm.value = '';
   } else {
     minutesFromForm.disabled = false;
+    minutesFromForm.value = '00';
   }
 }
 
