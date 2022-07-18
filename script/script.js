@@ -251,7 +251,6 @@ function editDelete(event) {
     const [action, index] = event.target.id.split('-');
 
     if (action == 'edit') {
-      saveBtn.innerHTML = 'Salvar Alteração';
       editMedication(index);
     } else {
       const medicamento = getLocalStorage()[index];
