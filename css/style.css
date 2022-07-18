@@ -491,12 +491,12 @@ label {
 footer {
   position: absolute;
   bottom: -120px;
-  padding: 1rem auto;
-  width: 100%;
+  padding: 1rem 0;
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   opacity: .7;
   border-top: rgba(0,0,0,0.3) 1px solid;
+  width: 100%;
 }
 
 footer p {
