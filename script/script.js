@@ -1,3 +1,5 @@
+updateMedicationList();
+
 function getLocalStorage() {
   return JSON.parse(localStorage.getItem('db_medication_list')) ?? [];
 }
@@ -43,18 +45,7 @@ const minutesFromForm = document.getElementById('minutos');
 const amountOfDays = document.getElementById('dias-medicamento');
 const saveBtn = document.querySelector('.btn-modal-registrar-medicamento');
 
-// Set time calculations.
-function schedules() {
-  let times = [
-    setHourSchedule()[0],
-    setHourSchedule()[1],
-    setHourSchedule()[2],
-    setHourSchedule()[3],
-    setHourSchedule()[4],
-    setHourSchedule()[5],
-  ];
-  return times;
-}
+// Validação do formulário.
 
 function eventInputCheck(event) {
   const { target } = event;
@@ -86,6 +77,19 @@ function setLastDay() {
   return formatedLastDay;
 }
 
+// Set time calculations.
+function schedules() {
+  let times = [
+    setHourSchedule()[0],
+    setHourSchedule()[1],
+    setHourSchedule()[2],
+    setHourSchedule()[3],
+    setHourSchedule()[4],
+    setHourSchedule()[5],
+  ];
+  return times;
+}
+
 function setHourSchedule() {
   const iterator = Number(timeLapse.value);
   const times = new Date();
@@ -108,16 +112,6 @@ function setHourSchedule() {
   return schedule;
 }
 
-function disableMinutesFromFormIfUserPicksTimeFromSystem() {
-  if (timesFromForm.value == -1 || timesFromForm.value == '') {
-    minutesFromForm.disabled = true;
-    minutesFromForm.value = '';
-  } else {
-    minutesFromForm.disabled = false;
-    minutesFromForm.value = '00';
-  }
-}
-
 function setMinutes() {
   const todayTime = new Date();
   let minutes = todayTime.getMinutes();
@@ -132,6 +126,16 @@ function setMinutes() {
     minutes = '45';
   }
   return minutes;
+}
+
+function disableMinutesFromFormIfUserPicksTimeFromSystem() {
+  if (timesFromForm.value == -1 || timesFromForm.value == '') {
+    minutesFromForm.disabled = true;
+    minutesFromForm.value = '';
+  } else {
+    minutesFromForm.disabled = false;
+    minutesFromForm.value = '00';
+  }
 }
 
 function isFieldsValid() {
@@ -261,8 +265,6 @@ function editDelete(event) {
     }
   }
 }
-
-updateMedicationList();
 
 // open and close modal
 const containerModal = document.querySelector('.modal-container');
