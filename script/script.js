@@ -298,3 +298,14 @@ timesFromForm.addEventListener(
 );
 
 document.querySelector('#tabela>tbody').addEventListener('click', editDelete);
+
+(function addOptionEls() {
+  let index = ""; // Inicia como vazio para que required do formulario acione
+  do {
+    const optionEl = document.createElement("option"); // Cria o elemento html option
+    optionEl.setAttribute("value", index); // Set o valor do index na propriedade value
+    optionEl.innerHTML = index < 0 ? "Hora Atual" : index; // Condicao para colocar o titulo no dropdown caso o valor for -1 
+    timesFromForm.appendChild(optionEl); // Adiciona o elemento option dentro do dropdown
+    index === "" ? (index = -1) : index++; // Inicia a declaracao dos valores dos options com -1
+  } while (index < 24);
+})();
