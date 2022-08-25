@@ -54,7 +54,7 @@ Você pode conferir pelo link: https://ducabelo.github.io/medication-schedule/
 
 ---
 
-# Medication Schedule
+# Medication Time Table
 
 ### (Under construction).
 
