@@ -1,4 +1,4 @@
-const API_URL = 'https://630cd38f53a833c53436277c.mockapi.io';
+const API_URL = 'https://630cd38f53a833c53436277c.mockapi.io/api/v1';
 
 // Consts
 const medicationForm = document.getElementById('formulario-medicamentos');
