@@ -19,18 +19,22 @@
       <button class="closer">X</button>
       <h1>Horários dos Medicamentos</h1>
       <form id="formulario-medicamentos" name="formulario-medicamentos">
+
         <div class="nome-do-medicamento">
+          <div class="id-form">
+            <input class="input-id" />
+          </div>
           <label for="medicamento">Medicamento *</label>
-          <input class="modal-input" type="text" name="medicamento" id="medicamento" data-index="new" required />
+          <input class="modal-input" type="text" name="medicamento" id="medicamento" data-index="new" req />
           <span class="span-alert"></span>
         </div>
         <div class="dosagem-indicacao">
           <div class="div-dosagem">
             <label for="dosagem">Dosagem *</label>
             <div class="campos-dosagem">
-              <input class="modal-input" type="text" name="dosagem" id="dosagem" required />
+              <input class="modal-input" type="text" name="dosagem" id="dosagem" req />
               <span class="span-alert"></span>
-              <select class="modal-input" id="opcoes-medidas" name="opcoes-medidas" required>
+              <select class="modal-input" id="opcoes-medidas" name="opcoes-medidas" req>
                 <option value=""></option>
                 <option value="ml">ml</option>
                 <option value="gotas">gotas</option>
@@ -42,16 +46,15 @@
 
           <div class="div-indicacao">
             <label for="indicacao">Indicação *</label>
-            <input class="modal-input" type="text" name="indicacao" id="indicacao" required />
+            <input class="modal-input" type="text" name="indicacao" id="indicacao" req />
             <span class="span-alert"></span>
           </div>
         </div>
 
         <div class="espaco-horas">
           <label for="opcoes-horas">De quantas em quantas horas? *</label>
-          <select class="modal-input" id="opcoes-horas" name="opcoes-horas" required>
+          <select class="modal-input" id="opcoes-horas" name="opcoes-horas" req>
             <option value=""></option>
-            <option value="4">4h</option>
             <option value="6">6h</option>
             <option value="8">8h</option>
             <option value="12">12h</option>
@@ -63,14 +66,14 @@
         <div class="hora-inicial">
           <div class="div-horas">
             <label for="horas">Horas *</label>
-            <select class="modal-input" id="horas" name="horas" required>
+            <select class="modal-input" id="horas" name="horas" req>
               // valores na funcao addOptionEls()
             </select>
           </div>
 
           <div class="div-minutos">
             <label for="minutos">Minutos *</label>
-            <select class="modal-input" id="minutos" name="minutos" disabled>
+            <select class="modal-input" id="minutos" name="minutos">
               <option value=""></option>
               <option value="00">00</option>
               <option value="15">15</option>
@@ -82,7 +85,7 @@
 
         <div class="qtde-dias">
           <label for="dias-medicamento">Quantidade de dias *</label>
-          <input class="modal-input" type="number" name="dias-medicamento" id="dias-medicamento" min="1" required />
+          <input class="modal-input" type="number" name="dias-medicamento" id="dias-medicamento" min="1" req />
           <span class="span-alert"></span>
         </div>
 
@@ -110,12 +113,10 @@
           <th>Hora</th>
           <th>Hora</th>
           <th>Hora</th>
-          <th>Hora</th>
-          <th>Hora</th>
           <th class="edit-delete-button">Ações</th>
         </tr>
       </thead>
-      <tbody>
+      <tbody class="tbody">
 
       </tbody>
     </table>
@@ -127,6 +128,7 @@
     </p>
   </footer>
 
+  <!-- <script src="./script/scriptA.js"></script> -->
   <script src="./script/script.js"></script>
 </body>
 
