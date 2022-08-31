@@ -4,7 +4,8 @@
 
 Estes dias levei minha mãe no médico, e depois de vê-la sofrendo para calcular os horários dos remédios e a quantidade de dias, tive a ideia de fazer uma tabela que calculasse isso.
 
-Os medicamentos são salvos no local storage no arquivo db_medication_list
+Para usar o LocalStorage linke o arquivo scritpA.js.
+Para usar o Fetch no mockapi use o arquivo script.js
 
 Usando o CRUD podemos ler os dados e visualizá-los na tela, cadastrar novo medicamento, editar e apagar.
 
@@ -62,9 +63,10 @@ Você pode conferir pelo link: https://ducabelo.github.io/medication-time-table/
 
 These days I took my mother to the doctor, and after seeing her struggle to calculate medication schedules and the number of days, I had the idea of making a table to calculate this.
 
-Os medicamentos são salvos no local storage no arquivo db_medication_list
+CRUD actions.
 
-Usando o CRUD podemos ler os dados e visualizá-los na tela, cadastrar novo medicamento, editar e apagar.
+If you want to use your Localstorage, grab the scriptA.js archive.
+For Mockapi use script.js.
 
 ## Some functions:
 
