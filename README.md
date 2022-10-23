@@ -51,7 +51,7 @@ Quando você insere o remédio, a primeira dose é a calculada a partir do momen
 
 Há também as funções de limpar formulário, abrir e fechar modal, checar inputs, dentre outras.
 
-Você pode conferir pelo link: https://ducabelo.github.io/medication-time-table/
+Você pode conferir pelo link: https://eduardohenriqueassis.github.io/medication-time-table/
 
 ---
 
@@ -110,4 +110,4 @@ When you enter the medicine name, the first dose is the one calculated from the 
 
 Clear form, open and close modal, check inputs, etc.
 
-See more details: https://ducabelo.github.io/medication-time-table/
+See more details: https://eduardohenriqueassis.github.io/medication-time-table/
